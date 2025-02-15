@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="color-scheme" content="dark light">
+     <link
+     rel="icon"
+     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>"
+   >
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+     <title>Prompt API Playground</title>
+     <script>
+       if (!isSecureContext) location.protocol = "https:";
+     </script>
+     <script src="script.js" type="module"></script>
+   </head>
+   <body>
+     <h1>AI Prompt Playground</h1>
+     <div id="error-message"></div>
+     <div id="prompt-area">
+       <form>
+         <label for="prompt-input">Your prompt</label>
+         <textarea id="prompt-input" placeholder="Type your prompt here..."></textarea>
+         <div class="button-group">
+           <button type="submit" id="submit-button">Generate response</button>
+           <button type="button" id="reset-button">Reset</button>
+           <span id="cost"></span>
+         </div>
+       </form>
+       <div id="response-area"></div>
+       <small>💡 Select problematic text to report issues</small>
+       <div id="problematic-area">
+         <h2>Problematic area:</h2>
+         <pre id="problem"></pre>
+       </div>
+     </div>
+   </body>
+ </html>
